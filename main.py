@@ -7,15 +7,16 @@ import pickle
 app = Flask(__name__)
 
 # Load datasets
-sym_des = pd.read_csv(r"C:\Users\jaide\OneDrive\Desktop\min\datasets\symtoms_df.csv")
-precautions = pd.read_csv(r"C:\Users\jaide\OneDrive\Desktop\min\datasets\precautions_df.csv")
-workout = pd.read_csv(r"C:\Users\jaide\OneDrive\Desktop\min\datasets\workout_df.csv")
-description = pd.read_csv(r"C:\Users\jaide\OneDrive\Desktop\min\datasets\description.csv")
-medications = pd.read_csv(r"C:\Users\jaide\OneDrive\Desktop\min\datasets\medications.csv")
-diets = pd.read_csv(r"C:\Users\jaide\OneDrive\Desktop\min\datasets\diets.csv")
+sym_des = pd.read_csv("./datasets/symtoms_df.csv")
+precautions = pd.read_csv("./datasets/precautions_df.csv")
+workout = pd.read_csv("./datasets/workout_df.csv")
+description = pd.read_csv("./datasets/description.csv")
+medications = pd.read_csv("./datasets/medications.csv")
+diets = pd.read_csv("./datasets/diets.csv")
 
 # Load model
-svc = pickle.load(open(r"C:\Users\jaide\OneDrive\Desktop\min\svc.pkl",'rb'))
+svc = pickle.load(open("svc.pkl", 'rb'))
+
 
 
 
